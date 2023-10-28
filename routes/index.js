@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 	if (req.query.hasOwnProperty('search')) {
 		const searchKeys = req.query.search
 			.split(' ')
-			.map((str) => str.charAt(0).toUpperCase() + str.slice(1))
+			.map((str) => str.toLowerCase())
 
 		const csvData = []
 
@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
 			.on('data', function (csvrow) {
 				let state = false
 				for (let i = 0; i < searchKeys.length; i++) {
-					if (csvrow.join().indexOf(searchKeys[i]) !== -1) {
+					if (csvrow.join().toLowerCase().indexOf(searchKeys[i]) !== -1) {
 						if (i === searchKeys.length - 1) {
 							csvData.push(csvrow.join().split(';'))
 						} else {
