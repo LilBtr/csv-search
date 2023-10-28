@@ -1,0 +1,55 @@
+ul,
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+li {
+	height: 100px;
+	background: #a08989;
+	padding: 15px;
+	margin-bottom: 8px;
+	transition: all .5s ease;
+}
+
+li img {
+	pointer-events: none;
+	background: #b63f3f;
+	width: 25px;
+	height: 80%;
+	margin-right: 5px;
+}
+
+li span {
+	text-transform: capitalize;
+	pointer-events: none;
+}
+
+h1 {
+	text-align: center;
+}
+
+.search-wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.search-wrap input {
+	width: 300px;
+}
+
+.short {
+	white-space: nowrap;
+	height: 30px;
+	overflow: hidden;
+	transition: all .5s ease;
+}
+
+.short span:last-child {
+	display: none;
+}
+
+.search {
+	width: 50px;
+}
